@@ -2,9 +2,9 @@
 
 include 'db.php';
 
-$kode_akun = $_POST['kode_akun'];
+$kode_barang = $_GET['kode_barang'];
 
-$query = $db->query("SELECT * FROM daftar_akun WHERE kode_daftar_akun = '$kode_daftar_akun'");
+$query = $db->query("SELECT * FROM barang WHERE kode_barang = '$kode_barang'");
 $jumlah = mysqli_num_rows($query);
 
 
@@ -21,4 +21,3 @@ else {
         mysqli_close($db);
         
  ?>
-
